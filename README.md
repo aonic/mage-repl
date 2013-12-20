@@ -1,20 +1,16 @@
-mage-repl
-=========
+### Interactive PHP environment for Magento
 
-Boris based REPL for Magento
+Boris based REPL initialized with Magento
 
-Install
-=======
+### Install
 
     make install
 
-Usage
-=====
-
+### Usage
 
     mage-repl --path=/path/to/magento
 
-OR
+#### OR
 
-   cd /path/to/magento
-   mage-repl
+    cd /path/to/magento
+    mage-repl
