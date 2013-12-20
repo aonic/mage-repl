@@ -30,10 +30,16 @@ umask(0);
 chdir($path);
 require_once $mageFile;
 Mage::setIsDeveloperMode($getopt->getOption('developer'));
-Mage::app($getopt->getOption('store'));
+$app = Mage::app($getopt->getOption('store'));
 
 restore_error_handler();
 restore_exception_handler(); 
 
 $boris = new Boris('mage> ');
+$boris->setLocal(array('app' => $app));
+$boris->onStart(function($worker, $scope) {
+	echo "Welcome to mage-repl.\n\n";
+	echo "Mage::app() is accessible using \$app.\n";
+	echo "Loaded store: " . $scope['app']->getStore()->getName() . "\n\n";
+});
 $boris->start();
