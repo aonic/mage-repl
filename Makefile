@@ -1,4 +1,3 @@
-
 help:
 
 	@echo "Targets:"
@@ -18,6 +17,7 @@ install-composer:
 
 	@if [ ! -d $$HOME/bin ]; then mkdir $$HOME/bin; fi
 	@if [ ! -f $$HOME/bin/composer.phar ]; then curl -sS https://getcomposer.org/installer | php -- --install-dir=$$HOME/bin/; fi
+	@ln -s $$HOME/bin/composer.phar $$HOME/bin/composer
 
 install-dependencies:
 
