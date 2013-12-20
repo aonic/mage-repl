@@ -1,0 +1,19 @@
+{
+	"name": "aonic/mage-repl",
+	"description": "REPL for Magento 1.x",
+	"homepage": "http://github.com/aonic/mage-repl",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Raja Kapur",
+			"email": "raja.kapur@gmail.com"
+		}
+	],
+	"require": {
+		"ulrichsg/getopt-php": "1.4.0",
+		"d11wtq/boris": "v1.0.6"
+	},
+	"config": {
+		"preferred-install": "dist"
+	}
+}
