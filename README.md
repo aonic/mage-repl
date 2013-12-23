@@ -1,6 +1,8 @@
 ### Interactive PHP environment for Magento
 
-Boris based REPL initialized with Magento
+PHP REPL initialized with Magento built with Boris.
+
+![Example](http://i.imgur.com/Awoflua.png "Quick Example")
 
 ### Install
 
