@@ -42,4 +42,10 @@ $boris->onStart(function($worker, $scope) {
 	echo "Mage::app() is accessible using \$app.\n";
 	echo "Loaded store: " . $scope['app']->getStore()->getName() . "\n\n";
 });
+$boris->onFailure(function($worker, $scope) {
+	// reconnect to DB
+	$db = Mage::getSingleton('core/resource')->getConnection('core_read');
+	$db->closeConnection();
+});
+
 $boris->start();
